@@ -1,0 +1,12 @@
+{
+  "name": "Spring JPA Practice",
+  "image": "mcr.microsoft.com/devcontainers/java:21",
+  "postStartCommand": "mvn spring-boot:run",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack"
+      ]
+    }
+  }
+}
