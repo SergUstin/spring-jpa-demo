@@ -1,0 +1,11 @@
+image: gitpod/workspace-java-21
+
+tasks:
+  - name: Run Spring Boot
+    init: mvn package -DskipTests -q
+    command: mvn spring-boot:run
+
+vscode:
+  extensions:
+    - redhat.java
+    - vscjava.vscode-spring-initializr
