@@ -8,10 +8,6 @@ import java.util.Optional;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
-    // ============================================================
-    // ЗАДАНИЕ: раскомментируй методы по одному и запусти приложение
-    // ============================================================
-
     // 1. Найти всех студентов из конкретного города
     List<Student> findByCity(String city);
 
