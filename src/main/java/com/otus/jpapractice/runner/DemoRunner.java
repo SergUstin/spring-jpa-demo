@@ -66,8 +66,17 @@ public class DemoRunner implements CommandLineRunner {
                         s -> System.out.println("   Найден: " + s),
                         () -> System.out.println("   Не найден"));
 
+        // --- findByEmail (Optional) ---
+        System.out.println("\n>> findByEmail(\"alex@gmail.com\")");
+        repository.findByEmail("alex@gmail.com")
+                .ifPresentOrElse(
+                        s -> System.out.println("   Найден: " + s),
+                        () -> System.out.println("   Не найден"));
+
         System.out.println("\n" + "=".repeat(60));
         System.out.println(" ПОПРОБУЙ САМ: измени аргументы вызовов выше и перезапусти!");
+        System.out.println(" H2 консоль: http://localhost:8080/h2-console");
+        System.out.println(" JDBC URL:   jdbc:h2:mem:practicedb  (user: sa, pass: пусто)");
         System.out.println("=".repeat(60) + "\n");
     }
 
